@@ -1,0 +1,207 @@
+.card-container-custom {
+    perspective: 1000px;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+.card-custom {
+    width: 250px;
+    height: 370px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 4px yellow;
+    /* Contorno amarillo */
+    background: linear-gradient(135deg, #4CAF50, #A8E063, #74C365);
+    background-size: cover;
+    padding: 10px;
+}
+
+.card-custom.flip {
+    transform: rotateY(180deg);
+}
+
+.card-custom .front,
+.card-custom .back {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-custom .front {
+    transform: rotateY(0deg);
+}
+
+.card-custom .back {
+    transform: rotateY(180deg);
+}
+
+.pokemon-img {
+    width: 90%;
+    height: 33%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    border: 1px solid;
+}
+
+.pokemon-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.powers {
+    text-align: left;
+    font-size: 10px;
+    margin-bottom: 2%;
+    width: 100%;
+
+    background: linear-gradient(135deg, #60c564, #7cc765, #84cc64);
+    border: 1px solid #285e16;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 5%;
+
+}
+
+.ivs {
+    text-align: left;
+    font-size: 10px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 100%;
+
+    background: linear-gradient(135deg, #60c564, #7cc765, #84cc64);
+    background-size: cover;
+    border-radius: 5px;
+    border: 1px solid #285e16;
+    padding: 5%;
+}
+
+.pokemon-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    width: 100%;
+}
+
+.color-text-shadow {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card-custom .back {
+    transform: rotateY(180deg);
+    background-image: url(back_card.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 15px;
+    margin-left: -4%;
+    height: 370px;
+    margin-top: -4%;
+}
+
+.powers-fire {
+    background: linear-gradient(135deg, #d55829, #FF8C00, #e5ad2e);
+    border: 1px solid #f5e200;
+    text-align: left;
+    font-size: 10px;
+    margin-bottom: 2%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 5%;
+}
+
+.ivs-fire {
+    background: linear-gradient(135deg, #d55829, #FF8C00, #e5ad2e);
+    border: 1px solid #f5e200;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 5%;
+}
+
+.card-custom-fire{
+    background: linear-gradient(135deg, #FF4500, #FF8C00, #FFD700);
+    width: 250px;
+    height: 370px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 4px yellow;
+    /* Contorno amarillo */
+    background-size: cover;
+    padding: 10px;
+}
+
+.card-custom-fire.flip {
+    transform: rotateY(180deg);
+}
+
+.card-custom-fire .front,
+.card-custom-fire .back {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-custom-fire .front {
+    transform: rotateY(0deg);
+}
+
+.card-custom-fire .back {
+    transform: rotateY(180deg);
+}
+
+.card-custom-fire .back {
+    transform: rotateY(180deg);
+    background-image: url(back_card.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 15px;
+    margin-left: -4%;
+    height: 100%;
+    margin-top: -4%;
+}
+
+.iframe-breeding {
+    width: 100%;
+    height: 1000px;
+    border: 7px solid #ff6f61;
+}
+
+.title-breding {
+    color:#ffcb05;
+    text-shadow:
+    -3px -3px 0 #3b5ca8, 3px -3px 0 #3b5ca8,
+    -3px 3px 0 #3b5ca8, 3px 3px 0 #3b5ca8,
+    -3px 0px 0 #3b5ca8, 3px 0px 0 #3b5ca8,
+    0px -3px 0 #3b5ca8, 0px 3px 0 #3b5ca8;
+}

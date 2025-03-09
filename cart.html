@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Pokémon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 250px;
+            height: 370px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 0 10px 4px yellow;
+            /* Contorno amarillo */
+            background: linear-gradient(135deg, #4CAF50, #A8E063, #74C365);
+            background: linear-gradient(135deg, #FF4500, #FF8C00, #FFD700);
+            background-size: cover;
+            background-size: cover;
+            padding: 10px;
+        }
+
+        .card.flip {
+            transform: rotateY(180deg);
+        }
+
+        .card .front,
+        .card .back {
+            position: absolute;
+            width: 95%;
+            height: 95%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card .front {
+            transform: rotateY(0deg);
+        }
+
+        .card .back {
+            transform: rotateY(180deg);
+        }
+
+        .pokemon-img {
+            width: 90%;
+            height: 33%;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            border: 1px solid;
+        }
+
+        .pokemon-name {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .powers-fire {
+            text-align: left;
+            font-size: 10px;
+            margin-bottom: 2%;
+            width: 100%;
+
+            background: linear-gradient(135deg, #60c564, #7cc765, #84cc64);
+            background: linear-gradient(135deg, #d55829, #FF8C00, #e5ad2e);
+            border: 1px solid #285e16;
+            border: 1px solid #f5e200;
+            background-size: cover;
+            border-radius: 5px;
+            padding: 5%;
+
+        }
+
+        .ivs-fire {
+            text-align: left;
+            font-size: 10px;
+            margin-top: 2%;
+            margin-bottom: 5%;
+            width: 100%;
+
+            background: linear-gradient(135deg, #d55829, #FF8C00, #e5ad2e);
+            border: 1px solid #f5e200;
+            background-size: cover;
+            border-radius: 5px;
+            padding: 5%;
+        }
+
+        .pokemon-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            width: 100%;
+        }
+
+        .color-text-shadow {
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .card .back {
+            transform: rotateY(180deg);
+            background-image: url(back_card.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            border-radius: 15px;
+            margin-left: -4%;
+            height: 370px;
+            margin-top: -4%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card-container" onclick="this.children[0].classList.toggle('flip')">
+            <div class="card">
+                <div class="front">
+                    <div class="pokemon-name" id="pokemon-name">Whimsicott</div>
+                    <img src="whinsicot.png" alt="Imagen del Pokémon" id="pokemon-img" class="pokemon-img">
+                    <div class="ivs-fire color-text-shadow">
+                        <strong>Ivs:</strong> <br>
+                        <span>PS: 31</span>
+                        <br>
+                        <span>VEL: 31</span>
+                    </div>
+                    <div class="powers-fire color-text-shadow">
+                        <strong>Poderes:</strong> <br>
+                        1- <span id="power1">Llanto Falso</span>
+                        <br>
+                        2- <span id="power2">Viento Afín</span> <br>
+                    </div>
+                    <div class="pokemon-info color-text-shadow">
+                        <span><strong>Naturaleza:</strong> <span id="nature">Cauta</span></span>
+                        <span><strong>Habilidad:</strong> <span id="ability">Bromista</span></span>
+                    </div>
+                </div>
+                <div class="back">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('pokemon-img').src = 'typhlosion.png';
+    </script>
+</body>
+
+</html>
